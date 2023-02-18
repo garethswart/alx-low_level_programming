@@ -3,9 +3,7 @@
 #include <stdio.h>
 /**
  * main - Entry point
- * 
  * Description: '1-last_digit.c'
- * 
  * Return: Always 0 (Success)
  */
 int main(void)
