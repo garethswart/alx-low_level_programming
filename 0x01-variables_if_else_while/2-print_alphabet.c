@@ -1,6 +1,11 @@
 #include <stdio.h>
-/* more headers goes there */
-/* betty style doc for function main goes there */
+/**
+ * main - Entry point
+ * 
+ * Description: '2-print_alphabet.c'
+ * 
+ * Return: Always 0 (Success)
+ */
 int main(void)
 {
 	char letters[] = "abcdefghijklmnopqrstuvwxyz";
@@ -8,9 +13,9 @@ int main(void)
 
 	while (i < 26)
 	{
-		putchar (letters[i]);
+		putchar(letters[i]);
 		i++;
 	}
-	putchar ('\n');
+	putchar('\n');
 	return (0);
 }
