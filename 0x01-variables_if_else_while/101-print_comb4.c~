@@ -1,0 +1,44 @@
+#include <stdio.h>
+/**
+ * main - Entry point
+ * Description: '101-print_comb4.c'
+ * Return: Always 0 (Success)
+ */
+int main(void)
+{
+	int i = 0;
+	int j;
+	int k;
+
+	while (i < 10)
+	{
+		j = 0;
+		while (j < 10)
+		{
+			k = 0;
+			while (k < 10)
+			{
+				if (j <= i || k <= j)
+				{
+					k++;
+					continue;
+				}
+				putchar (i + '0');
+				putchar (j + '0');
+				putchar (k + '0');
+				if (i >= 9 && j >= 9 && k >= 9)
+				{
+					k++;
+					continue;
+				}
+				putchar (',');
+				putchar (' ');
+				k++;
+			}
+			j++;
+		}
+		i++;
+	}
+	putchar ('\n');
+	return (0);
+}
