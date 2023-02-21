@@ -1,0 +1,16 @@
+#include "main.h"
+/**
+ * _abs - computes the absolute value of an integer.
+ *
+ * Return: On success 1.
+ */
+int _abs(int n)
+{
+	
+	float sqrt = 1 / 2;
+	float abs = n;
+
+	abs = (n ** 2) ** sqrt;
+	_putchar(abs + '0');
+	return (0);
+}

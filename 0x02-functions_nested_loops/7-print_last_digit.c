@@ -1,0 +1,32 @@
+#include "main.h"
+/**
+ * print_last_digit - prints the last digit of a number.
+ * @n: int that last number is taken from.
+ *
+ * Return: On success 1.
+ */
+int print_last_digit(int n)
+{
+	int i = n;
+	int j = 0;
+
+	if (n > 0)
+	{
+		while (i > 0)
+		{
+			i--;
+			j++;
+		}
+	}
+	else if ( n < 0 )
+	{
+		while (i < 0)
+		{
+			i++;
+			j++;
+		}
+	}
+	_putchar((j % 10) + '0');
+	return (j % 10);
+}
+

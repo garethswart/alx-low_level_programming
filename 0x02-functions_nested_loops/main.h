@@ -40,4 +40,47 @@ int _isalpha(int c);
  * Return: On success 1.
  */
 int print_sign(int n);
+/**
+ * _abs - computes the absolute value of an integer.
+ * @int: Int to be computed.
+ *
+ * Return: On success 1.
+ */
+int _abs(int);
+/**
+ * print_last_digit - prints the last digit of a number.
+ * @int: int that last number is taken from.
+ *
+ * Return: On success 1.
+ */
+int print_last_digit(int);
+/**
+ * jack_bauer - prints every minute of the day of Jack Bauer,
+ * starting from 00:00 to 23:59.
+ *
+ * Return: On success 1.
+ */
+void jack_bauer(void);
+/**
+ * times_table - prints the 9 times table, starting with 0.
+ *
+ * Return: On success 0.
+ */
+void times_table(void);
+/**
+ * add - adds two integers and returns the result.
+ * @a: first int to be added.
+ * @b: second int to be added..
+ *
+ * Return: On success 0.
+ */
+int add(int a, int b);
+/**
+ * print_to_98 - prints all natural numbers from n to 98,
+ * followed by a new line.
+ * @n: first int to be added.
+ *
+ * Return: On success 0.
+ */
+void print_to_98(int n);
 #endif
