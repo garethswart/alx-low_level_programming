@@ -29,8 +29,7 @@ void times_table(void)
 					_putchar(i + '0');
 				if (x == 0)
 					break;
-				else
-					j = i;
+				j = i;
 				t = t / 10;
 			}
 			x++;
