@@ -2,7 +2,11 @@
 #define MAIN_H
 
 #include <stdio.h>
-
+/**
+ * largest_number - returns the largest of 3 numbers
+ * @i: first integer
+ * Return: 0
+ */
 void positive_or_negative(int i);
 
 /**
