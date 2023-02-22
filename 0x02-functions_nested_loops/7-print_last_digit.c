@@ -18,7 +18,7 @@ int print_last_digit(int n)
 			j++;
 		}
 	}
-	else if ( n < 0 )
+	else if (n < 0)
 	{
 		while (i < 0)
 		{
@@ -29,4 +29,3 @@ int print_last_digit(int n)
 	_putchar((j % 10) + '0');
 	return (j % 10);
 }
-
