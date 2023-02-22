@@ -10,32 +10,33 @@ void print_to_98(int n)
 {
 	int i = 0;
 	int j;
-	int numb;
+	int a = n;
+	int b;
+	int t;
 
-	while (i < 10)
+	while (a < 99)
 	{
+		b = a;
 		j = 0;
-		while (j < 10)
+		if (a < 0)
+			_putchar(45);
+		for (t = 1000000000; t > 0;)
 		{
-			numb = (i * 10) + j;
-			if (numb < n)
+			i = (b / t) % 10;
+			if (i != 0 || j != 0 || a == 0)
 			{
-				continue;
-				j++;
+				_putchar(i + '0');
+				j = 1;
 			}
-			if (i > 0)
-				_putchar(i);
-			_putchar(j);
-			if (numb >= 98)
-			{
-				j++;
-				continue;
-			}
-			_putchar(44);
-			_putchar(32);
-			j++;
+			if (a == 0)
+				break;
+			t = t / 10;
 		}
-		i++;
+		a++;
+		if (a > 98)
+			break;
+		_putchar(44);
+		_putchar(32);
 	}
 	_putchar('\n');
 }
