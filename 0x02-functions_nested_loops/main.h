@@ -85,8 +85,9 @@ int add(int a, int b);
 void print_to_98(int n);
 #include "main.h"
 /**
- * print_times_table - prints the n times table, 
+ * print_times_table - prints the n times table,
  * starting with 0, between 0 and 15.
+ * @n: number to be multiplied.
  *
  * Return: On success 0.
  */
