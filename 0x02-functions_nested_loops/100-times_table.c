@@ -36,7 +36,7 @@ void print_times_table(int n)
 				t = t / 10;
 			}
 			x++;
-			if (x > (n + 1))
+			if (x > n)
 				continue;
 			_putchar(44);
 		}
