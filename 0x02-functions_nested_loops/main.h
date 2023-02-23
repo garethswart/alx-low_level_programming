@@ -83,4 +83,12 @@ int add(int a, int b);
  * Return: On success 0.
  */
 void print_to_98(int n);
+#include "main.h"
+/**
+ * print_times_table - prints the n times table, 
+ * starting with 0, between 0 and 15.
+ *
+ * Return: On success 0.
+ */
+void print_times_table(int n);
 #endif
