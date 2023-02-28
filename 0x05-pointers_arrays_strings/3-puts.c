@@ -1,6 +1,6 @@
-include "main.h"
+#include "main.h"
 /**
- * _puts - prints a string, 
+ * _puts - prints a string,
  * followed by a new line, to stdout.
  * @str: string to be printed.
  *
@@ -8,13 +8,16 @@ include "main.h"
  */
 void _puts(char *str)
 {
-	int i;
+	int i = 0;
+	int strlen = 0;
 
-	while (*str[i] != "")
+	while (*(str + strlen) != '\0')
+		strlen++;
+
+	while (i < strlen)
 	{
-		_putchar(*str[i]);
+		_putchar(*(str + i));
 		i++;
 	}
 	_putchar('\n');
-	return (i);
 }

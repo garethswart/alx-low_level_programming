@@ -1,7 +1,7 @@
-include "main.h"
+#include "main.h"
 /**
  * puts2 - prints every other character of a string,
- * starting with the first character, 
+ * starting with the first character,
  * followed by a new line.
  * @str: string to be printed.
  *
@@ -9,14 +9,15 @@ include "main.h"
  */
 void puts2(char *str)
 {
-	int i;
+	int i = 0;
+	int strlen = 0;
 
-	while (*str[i] != "")
+	while (*(str + strlen) != '\0')
 	{
+		strlen++;
 		if (i % 2 == 0)
-			_putchar(*str[i]);
+			_putchar(*(str + i));
 		i++;
 	}
 	_putchar('\n');
-	return (i);
 }
