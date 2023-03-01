@@ -9,7 +9,8 @@ int _atoi(char *s)
 {
 	int j;
 	int intval = 0;
-	int charval;
+	char charval;
+	int intcharval;
 	int numstrt;
 	int numend;
 	int n = 0;
@@ -18,10 +19,14 @@ int _atoi(char *s)
 
 	while (*(s + strlen) != '\0')
 	{
-		if (*(s + strlen) > 47 && *(s + strlen) < 58)
+		charval = *(s + strlen);
+		intcharval = charval;
+		if (intcharval > 47 && intcharval < 58)
 		{
 			n = 1;
-			if (*(s + (strlen - 1)) < 48 && *(s + (strlen - 1)) > 57)
+			charval = *(s + (strlen - 1));
+			intcharval = charval;
+			if (intcharval < 48 && intcharval > 57)
 				numstrt = strlen;
 		}
 		else if (n == 1)
@@ -36,7 +41,8 @@ int _atoi(char *s)
 	for (; j > numstrt; j--)
 	{
 		charval = *(s + j);
-		intval = intval + ((charval - 47) * t);
+		intcharval = charval;
+		intval = intval + ((intcharval - 47) * t);
 		t = t * 10;
 	}
 	return (intval);
