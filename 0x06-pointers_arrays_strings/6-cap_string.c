@@ -1,0 +1,47 @@
+#include "main.h"
+/**
+ * cap_string - capitalizes all words of a string.
+ * @c: String to be capitalised.
+ *
+ * Return: void.
+ */
+char *cap_string(char *c)
+{
+	int strlen = 0;
+	int uval;
+	int sep;
+	int isword = 1;
+	int islet;
+	char s[] = {32, '\t', '\n', 44, 59, 46, 33, 63, 34, 40, 41, 123, 125};
+
+	while (c[strlen] != '\0')
+	{
+		sep = 0;
+		islet = 0;
+		if (c[strlen - 1] > 96 && c[strlen - 1] < 123)
+		{
+			islet = 1;
+		}
+		if (c[strlen - 1] > 64 && c[strlen - 1] < 91)
+		{
+			islet = 1;
+		}
+		while (strlen - 1 >= 0 && sep < 12 && islet == 0)
+		{
+			if (c[strlen - 1] == s[sep])
+			{
+				isword = 1;
+				break;
+			}
+			sep++;
+		}
+		if (c[strlen] > 96 &&  c[strlen] < 123 && isword == 1 && islet == 0)
+		{
+			uval = c[strlen] - 32;
+			c[strlen] = uval;
+		}
+		strlen++;
+		isword = 0;
+	}
+	return (c);
+}
