@@ -1,0 +1,24 @@
+#include "main.h"
+/**
+ * string_toupper - changes all lowercase
+ * letters of a string to uppercase.
+ * @c: String to be capitalised.
+ *
+ * Return: void.
+ */
+char *string_toupper(char *c)
+{
+	int strlen = 0;
+	int uval;
+
+	while (c[strlen] != '\0')
+	{
+		if (c[strlen] > 96 &&  c[strlen] < 123)
+		{
+			uval = c[strlen] - 32;
+			c[strlen] = uval;
+		}
+		strlen++;
+	}
+	return (c);
+}

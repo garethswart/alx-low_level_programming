@@ -1,0 +1,19 @@
+#include "main.h"
+#include <stdio.h>
+/**
+ * _strcat - concatenates two strings.
+ * @dest: Destination of string appended to.
+ * @src: String to be appended.
+ *
+ * Return: void.
+ */
+char *_strcat(char *dest, char *src)
+{
+	int strlen = 6;
+	char tmp;
+
+	tmp = *(dest + strlen);
+	printf("program initiated, str: %d\n", tmp);
+	printf("program initiated, str: %d\n", src[strlen]);
+	return (dest);
+}
