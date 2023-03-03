@@ -60,7 +60,7 @@ void reverse_array(int *a, int n);
 /**
  * string_toupper - changes all lowercase
  * letters of a string to uppercase.
- * @param1: String to be capitalised.
+ * @: String to be capitalised.
  *
  * Return: void.
  */
@@ -68,7 +68,7 @@ char *string_toupper(char *);
 
 /**
  * cap_string - capitalizes all words of a string.
- * @param1: String to be capitalised.
+ * @: String to be capitalised.
  *
  * Return: void.
  */
@@ -76,7 +76,7 @@ char *cap_string(char *);
 
 /**
  * leet - encodes a string into 1337.
- * @param1: String to be encoded.
+ * @: String to be encoded.
  *
  * Return: void.
  */
@@ -84,7 +84,7 @@ char *leet(char *);
 
 /**
  * rot13 - encodes a string using rot13.
- * @param1: String to be encoded.
+ * @: String to be encoded.
  *
  * Return: void.
  */
