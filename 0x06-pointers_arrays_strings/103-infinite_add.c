@@ -41,7 +41,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 			err = 1;
 			return (0);
 			break;
-		{
+		}
 	}
 	while (s1len >= 0 && err == 0)
 	{
