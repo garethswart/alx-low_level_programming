@@ -14,7 +14,6 @@ char *_strstr(char *haystack, char *needle)
 	int k;
 	int found = 0;
 	char *strstrt;
-	
 
 	while (haystack[i] != '\0' && found == 0)
 	{
@@ -37,9 +36,6 @@ char *_strstr(char *haystack, char *needle)
 	}
 	if (found == 0)
 		return (0);
-	else
-	{
-		strstrt = &haystack[i - 1];
-		return (strstrt);
-	}
+	strstrt = &haystack[i - 1];
+	return (strstrt);
 }

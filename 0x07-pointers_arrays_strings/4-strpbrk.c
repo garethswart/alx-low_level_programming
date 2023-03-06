@@ -32,5 +32,5 @@ char *_strpbrk(char *s, char *accept)
 	if (m == 0)
 		return (0);
 	else
-		return (k);			
+		return (k);
 }
