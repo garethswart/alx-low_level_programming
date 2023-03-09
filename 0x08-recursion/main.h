@@ -54,8 +54,25 @@ int _pow_recursion(int x, int y);
  * _sqrt_recursion - returns the natural square root of a number.
  * @n: number to be rooted.
  *
- * Return: sqare root.
+ * Return: square root.
  */
 int _sqrt_recursion(int n);
+
+/**
+ * is_prime_number - returns 1 if the input integer
+ * is a prime number, otherwise return 0.
+ * @n: number to be evaluated.
+ *
+ * Return: 1 if prime, 0 otherwise.
+ */
+int is_prime_number(int n);
+
+/**
+ * is_palindrome - determines if palindrome.
+ * @s: string to be evaluated.
+ *
+ * Return: int.
+ */
+int is_palindrome(char *s);
 
 #endif

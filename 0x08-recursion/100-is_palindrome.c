@@ -1,0 +1,46 @@
+#include "main.h"
+/**
+ * _strlen - returns the length of a string.
+ * @s: string to be measured.
+ *
+ * Return: length of string.
+ */
+int _strlen(char *s)
+{
+	if (*s == '\0')
+	{
+		return (0);
+	}
+	return (1 + _strlen(s + 1));
+}
+
+/**
+ * _pal - determines if string is palindrome.
+ * @s: string to be evaluated.
+ * @len: length.
+ * @i: index.
+ *
+ * Return: palindrome.
+ */
+int _pal(char *s, int len, int i)
+{
+	if (i < (len / 2) && s + i == s + (len - i))
+		return (_pal(s, len, i + 1));
+	else if (s + i != s + (len - i))
+		return (0);
+	return (1);
+}
+
+/**
+ * is_palindrome - determines if palindrome.
+ * @s: string to be evaluated.
+ *
+ * Return: int.
+ */
+int is_palindrome(char *s)
+{
+	int len;
+
+	len = _strlen(s);
+	return (_pal(s, len, 0));
+}
