@@ -24,9 +24,9 @@ int _strlen(char *s)
  */
 int _pal(char *s, int len, int i)
 {
-	if (i < (len / 2) && s + i == s + (len - i))
+	if (i <= (len / 2) && s + i == s + (len - i))
 		return (_pal(s, len, i + 1));
-	else if (s + i != s + (len - i))
+	else if (s + i != s + (len - i) && i < (len / 2))
 		return (0);
 	return (1);
 }
