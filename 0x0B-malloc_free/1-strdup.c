@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdio.h>
 #include <stdlib.h>
 /**
  * _strlen - determines the length of a string.
@@ -27,11 +26,10 @@ char *_strdup(char *str)
 {
 	int j = _strlen(str);
 	char *p = (char*)malloc(j);
-	int i;
+	int i = 0;
 	char tmp;
 
-	printf("j created");
-	if (j == 0)
+	if (j == 0 || !(char *)malloc(j))
 		return (NULL);
 	while (i < j)
 	{
