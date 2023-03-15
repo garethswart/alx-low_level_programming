@@ -28,7 +28,7 @@ char *str_concat(char *s1, char *s2)
 {
 	int j = _strlen(s1);
 	int k = _strlen(s2);
-	char *p = (char *)malloc((j + k) * sizeof(char));
+	char *p = (char *)malloc((j + k + 1) * sizeof(char));
 	int i = 0;
 
 	if (!p)
@@ -46,5 +46,6 @@ char *str_concat(char *s1, char *s2)
 		p[i] = s2[i - j];
 		i++;
 	}
+	p[i] = '\0';
 	return (p);
 }
