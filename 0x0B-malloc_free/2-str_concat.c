@@ -28,11 +28,14 @@ char *str_concat(char *s1, char *s2)
 {
 	int j = _strlen(s1);
 	int k = _strlen(s2);
-	char *p = (char *)malloc(j + k);
+	char *p = (char *)malloc((j + k) * sizeof(char));
 	int i = 0;
 
-	if (!(char *)malloc(j))
+	if (!p)
+	{
+		free(p);
 		return (NULL);
+	}
 	while (i < j)
 	{
 		p[i] = s1[i];
