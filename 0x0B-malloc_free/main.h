@@ -66,4 +66,12 @@ void free_grid(int **grid, int height);
  */
 char *argstostr(int ac, char **av);
 
+/**
+ * strtow - splits a string into words.
+ * @str: string to be split.
+ *
+ * Return: pointer to array of words.
+ */
+char **strtow(char *str);
+
 #endif
