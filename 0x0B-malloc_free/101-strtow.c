@@ -56,7 +56,8 @@ char **strtow(char *str)
 			len++;
 			chr++;
 		}
-		p[wrd] = (char *)malloc((len * sizeof(char)) + 1);
+		len++;
+		p[wrd] = (char *)malloc(len * sizeof(char));
 		if (!p)
 		{
 			for (wrd = 0; wrd < wrds; wrd++)
@@ -64,12 +65,13 @@ char **strtow(char *str)
 			free(p);
 			return (NULL);
 		}
-		chr = chr - len;
-		for (k = 0; k < len; k++)
+		chr = chr - (len - 1);
+		for (k = 0; k < (len - 1); k++)
 		{
 			p[wrd][k] = str[chr];
 			chr++;
 		}
+		p[wrd][k] = '\0';
 	}
 	p[wrd] = NULL;
 	return (p);
