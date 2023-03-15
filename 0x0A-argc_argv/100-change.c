@@ -19,6 +19,11 @@ int main(int argc, char **argv)
 		printf("Error\n");
 		exit(1);
 	}
+	if (atoi(argv[1]) < 0)
+	{
+		printf("%d\n", 0);
+		exit(0);
+	}
 	chng = atoi(argv[1]);
 	cns = chng / 25;
 	rm = chng % 25;
