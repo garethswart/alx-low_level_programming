@@ -2,7 +2,8 @@
 #include <stdlib.h>
 /**
  * _strlen - determines the length of a string.
- * @str: string to be measured.
+ * @argc: argc.
+ * @argv: argv.
  *
  * Return: string length as int.
  */
@@ -37,7 +38,7 @@ char *argstostr(int ac, char **av)
 	int j;
 	int k = 0;
 	int len = _strlen(ac, av);
-	char *p = (char *)malloc(len * sizeof(char));
+	char *p = (char *)malloc((len * sizeof(char)) + 1);
 
 	if (ac == 0 || av == NULL || !p)
 	{
