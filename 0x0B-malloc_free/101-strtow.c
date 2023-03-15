@@ -41,7 +41,7 @@ char **strtow(char *str)
 	int wrds = _wrdc(str);
 	char **p = (char **)malloc((wrds * sizeof(char *)) + 1);
 
-	if (str == NULL || str == 0 || !p)
+	if (str == NULL || str == 0 || !p || wrds < 1)
 	{
 		free(p);
 		return (NULL);
