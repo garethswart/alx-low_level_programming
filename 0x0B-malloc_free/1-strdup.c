@@ -10,13 +10,15 @@ int _strlen(char *str)
 {
 	int i = 0;
 
+	if (str == 0)
+		return (0);
 	while (str[i] != '\0')
 		i++;
 	return (i);
 }
 
 /**
- * _strdup -  returns a pointer to a newly allocated space in memory,
+ * _strdup - returns a pointer to a newly allocated space in memory,
  * which contains a copy of the string given as a parameter.
  * @str: string to be duplicated.
  *
@@ -25,12 +27,15 @@ int _strlen(char *str)
 char *_strdup(char *str)
 {
 	int j = _strlen(str);
-	char *p = (char *)malloc(j);
+	char *p = (char *)malloc(j * sizeof(char));
 	int i = 0;
 	char tmp;
 
-	if (!(char *)malloc(j))
+	if (!p)
+	{
+		free(p);
 		return (NULL);
+	}
 	while (i < j)
 	{
 		tmp = str[i];
