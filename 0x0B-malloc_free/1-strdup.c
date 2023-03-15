@@ -25,7 +25,7 @@ int _strlen(char *str)
 char *_strdup(char *str)
 {
 	int j = _strlen(str);
-	char *p = (char*)malloc(j);
+	char *p = (char *)malloc(j);
 	int i = 0;
 	char tmp;
 

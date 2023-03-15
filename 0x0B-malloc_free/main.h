@@ -38,4 +38,14 @@ char *_strdup(char *str);
  */
 char *str_concat(char *s1, char *s2);
 
+/**
+ * alloc_grid -  returns a pointer to a
+ * 2 dimensional array of integers.
+ * @width: width of array.
+ * @height: height of array.
+ *
+ * Return: pointer to array.
+ */
+int **alloc_grid(int width, int height);
+
 #endif
