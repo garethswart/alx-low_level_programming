@@ -47,4 +47,12 @@ void print_dog(struct dog *d);
  */
 dog_t *new_dog(char *name, float age, char *owner);
 
+/**
+ * free_dog - Frees dogs
+ * @d: Pointer to dog.
+ *
+ * Return: none
+ */
+void free_dog(dog_t *d);
+
 #endif
