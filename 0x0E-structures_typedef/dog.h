@@ -16,6 +16,8 @@ struct dog
 	char *owner;
 };
 
+typedef struct dog dog_t;
+
 /**
  * init_dog - initiates struct dog details
  * @d: Pointer to new var of type dog.
